@@ -1,0 +1,91 @@
+:root {
+  --bg: #0E0F12;
+  --panel: #1A1C21;
+  --text: #F2EFEA;
+  --muted: #B9B5AD;
+  --gold: #C9A24B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+}
+
+a { color: var(--gold); }
+button { font-family: inherit; cursor: pointer; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 20px 32px;
+}
+.logo { font-weight: 800; letter-spacing: 2px; text-decoration: none; color: var(--text); }
+.nav-links { display: flex; gap: 24px; }
+
+.page { padding: 24px 32px; max-width: 1200px; margin: 0 auto; }
+
+.btn {
+  background: var(--gold);
+  color: var(--bg);
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  min-height: 44px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--text); }
+
+.chip {
+  background: var(--panel);
+  color: var(--text);
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  min-height: 44px;
+}
+.chip.active { background: var(--gold); color: var(--bg); font-weight: 600; }
+
+.card { background: var(--panel); border-radius: 12px; padding: 24px; }
+.muted { color: var(--muted); }
+.row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+.hero-text { flex: 1 1 420px; }
+.hero h1 { font-size: clamp(32px, 5vw, 56px); line-height: 1.1; margin: 0 0 16px; }
+.hero-car { flex: 1 1 420px; }
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.builder { display: flex; gap: 24px; flex-wrap: wrap; }
+.builder-view {
+  flex: 2 1 520px;
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.builder-panel { flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; }
+
+.swatch { width: 40px; height: 40px; border-radius: 50%; border: 2px solid transparent; }
+.swatch.active { border-color: var(--text); }
+
+.footer { padding: 24px 32px; font-size: 12px; color: var(--muted); }

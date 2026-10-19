@@ -1,0 +1,21 @@
+{
+  "paint": [
+    { "id": "obsidian", "name": "Obsidian Black", "color": "#15161A", "priceNgn": 0 },
+    { "id": "ruby", "name": "Ruby Red", "color": "#7A1F2B", "priceNgn": 0 },
+    { "id": "navy", "name": "Midnight Blue", "color": "#1F3A5F", "priceNgn": 0 },
+    { "id": "pearl", "name": "Pearl White", "color": "#E8E6E1", "priceNgn": 0 },
+    { "id": "gold", "name": "Desert Gold", "color": "#C9A24B", "priceNgn": 0 }
+  ],
+  "wheels": [
+    { "id": "wheel-1", "name": "Classic", "image": "/parts/wheel-1.png", "priceNgn": 0 },
+    { "id": "wheel-2", "name": "Forged", "image": "/parts/wheel-2.png", "priceNgn": 0 }
+  ],
+  "bumper": [
+    { "id": "stock", "name": "Stock", "image": null, "priceNgn": 0 },
+    { "id": "bumper-sport", "name": "Sport", "image": "/parts/bumper-sport.png", "priceNgn": 0 }
+  ],
+  "spoiler": [
+    { "id": "none", "name": "None", "image": null, "priceNgn": 0 },
+    { "id": "spoiler-duckbill", "name": "Duckbill", "image": "/parts/spoiler-duckbill.png", "priceNgn": 0 }
+  ]
+}
