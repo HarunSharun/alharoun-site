@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import CarView from '../components/CarView.jsx'
 import { whatsappLink } from '../config.js'
+import CarModel3D from '../components/CarModel3D.jsx'
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </div>
         <div className="card hero-car">
-          <CarView />
+          <CarModel3D />
         </div>
       </section>
 

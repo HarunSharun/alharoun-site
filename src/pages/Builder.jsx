@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import parts from '../data/parts.json'
-import CarView from '../components/CarView.jsx'
+import CarModel3D from '../components/CarModel3D.jsx'
 import { useBuild, SLOTS } from '../store.js'
 import { whatsappLink } from '../config.js'
-
 const LABELS = { paint: 'Paint', wheels: 'Wheels', bumper: 'Bumper', spoiler: 'Spoiler' }
 
 export default function Builder() {
@@ -46,7 +45,7 @@ export default function Builder() {
   return (
     <main className="page builder">
       <div className="builder-view">
-        <CarView />
+        <CarModel3D />
       </div>
 
       <div className="builder-panel">
