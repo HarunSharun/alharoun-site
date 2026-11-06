@@ -10,10 +10,6 @@
     { "id": "wheel-1", "name": "Classic", "image": "/parts/wheel-1.png", "priceNgn": 0 },
     { "id": "wheel-2", "name": "Forged", "image": "/parts/wheel-2.png", "priceNgn": 0 }
   ],
-  "bumper": [
-    { "id": "stock", "name": "Stock", "image": null, "priceNgn": 0 },
-    { "id": "bumper-sport", "name": "Sport", "image": "/parts/bumper-sport.png", "priceNgn": 0 }
-  ],
   "spoiler": [
     { "id": "none", "name": "None", "image": null, "priceNgn": 0 },
     { "id": "spoiler-duckbill", "name": "Duckbill", "image": "/parts/spoiler-duckbill.png", "priceNgn": 0 }

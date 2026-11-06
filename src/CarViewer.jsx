@@ -4,7 +4,7 @@ import { useBuild } from '../store.js'
 // Change this to true once your car images are in public/parts
 const ART_READY = false
 
-const LAYER_SLOTS = ['bumper', 'wheels', 'spoiler']
+const LAYER_SLOTS = ['wheels', 'spoiler']
 
 const layer = { position: 'absolute', inset: 0, width: '100%', height: '100%' }
 

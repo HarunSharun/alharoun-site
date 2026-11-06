@@ -3,10 +3,11 @@ import parts from '../data/parts.json'
 import CarModel3D from '../components/CarModel3D.jsx'
 import { useBuild, SLOTS } from '../store.js'
 import { whatsappLink } from '../config.js'
-const LABELS = { paint: 'Paint', wheels: 'Wheels', bumper: 'Bumper', spoiler: 'Spoiler' }
+const LABELS = { paint: 'Paint', wheels: 'Wheels', spoiler: 'Spoiler' }
 
 export default function Builder() {
   const build = useBuild()
+  const [carColor, setCarColor] = useState('#0062ff')
   const { setPart, setBuild } = build
   const [activeSlot, setActiveSlot] = useState('paint')
   const [copied, setCopied] = useState(false)
@@ -21,7 +22,7 @@ export default function Builder() {
     })
     if (Object.keys(shared).length > 0) setBuild(shared)
   }, [setBuild])
-
+ 
   const chosen = SLOTS.map((slot) => parts[slot].find((p) => p.id === build[slot]))
   const total = chosen.reduce((sum, part) => sum + (part ? part.priceNgn : 0), 0)
   const priceText = total > 0 ? `₦${total.toLocaleString()}` : 'Ask us for a price'
@@ -41,13 +42,11 @@ export default function Builder() {
       // clipboard blocked, ignore
     }
   }
-
   return (
-    <main className="page builder">
+    <>
       <div className="builder-view">
-        <CarModel3D />
+        <CarModel3D bodyColor={carColor} />
       </div>
-
       <div className="builder-panel">
         <div className="row">
           {SLOTS.map((slot) => (
@@ -61,31 +60,28 @@ export default function Builder() {
           ))}
         </div>
 
-        <div className="card">
-          <strong>{LABELS[activeSlot]}</strong>
-          <div className="row" style={{ marginTop: 12 }}>
-            {parts[activeSlot].map((p) =>
-              activeSlot === 'paint' ? (
-                <button
-                  key={p.id}
-                  title={p.name}
-                  aria-label={p.name}
-                  className={`swatch ${build.paint === p.id ? 'active' : ''}`}
-                  style={{ background: p.color }}
-                  onClick={() => setPart('paint', p.id)}
-                />
-              ) : (
-                <button
-                  key={p.id}
-                  className={`chip ${build[activeSlot] === p.id ? 'active' : ''}`}
-                  onClick={() => setPart(activeSlot, p.id)}
-                >
-                  {p.name}
-                </button>
-              )
-            )}
-          </div>
-        </div>
+        <div className="row" style={{ marginTop: 12 }}>
+  {parts[activeSlot].map((p) =>
+    activeSlot === 'paint' ? (
+      <button
+        key={p.id}
+        title={p.name}
+        aria-label={p.name}
+        className={`swatch ${build.paint === p.id ? 'active' : ''}`}
+        style={{ background: p.color }}
+        onClick={() => setPart('paint', p.id)}
+      />
+    ) : (
+      <button
+        key={p.id}
+        className={`chip ${build[activeSlot] === p.id ? 'active' : ''}`}
+        onClick={() => setPart(activeSlot, p.id)}
+      >
+        {p.name}
+      </button>
+    )
+  )}
+</div>
 
         <div className="card">
           <div className="muted">Estimated price (duty-paid)</div>
@@ -97,6 +93,6 @@ export default function Builder() {
           {copied ? 'Link copied!' : 'Copy share link'}
         </button>
       </div>
-    </main>
+    </>
   )
 }

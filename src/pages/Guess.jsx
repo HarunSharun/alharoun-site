@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import questions from '../data/questions.json'
 import { shareLink } from '../config.js'
+import GuessViewer from '../components/GuessViewer.jsx'
+
+// Set to 0, 1, 2... to force one question while testing. Set back to null when done.
+const TEST_INDEX = null
 
 function readStreak() {
   try {
@@ -20,7 +24,7 @@ function saveStreak(n) {
 
 export default function Guess() {
   const day = Math.floor(Date.now() / 86400000)
-  const q = questions[day % questions.length]
+  const q = TEST_INDEX !== null ? questions[TEST_INDEX] : questions[day % questions.length]
   const [picked, setPicked] = useState(null)
   const [streak, setStreak] = useState(readStreak())
 
@@ -33,14 +37,18 @@ export default function Guess() {
   }
 
   const correct = picked === q.answer
-  const shareText = `I got today's Guess the AMG ${correct ? 'right' : 'wrong'}! Streak: ${streak}. Play here: ${window.location.origin}/guess`
+  const shareText = `I got today's Guess the Mercedes ${correct ? 'right' : 'wrong'}! Streak: ${streak}. Play here: ${window.location.origin}/guess`
 
   return (
     <main className="page" style={{ maxWidth: 720 }}>
-      <h2>Guess the AMG</h2>
+      <h2>Guess the Mercedes</h2>
       <p className="muted">Streak: {streak}</p>
       <div className="card">
-        <img src={q.image} alt="Which AMG is this?" style={{ width: '100%', borderRadius: 8 }} />
+        {q.model ? (
+          <GuessViewer url={q.model} />
+        ) : (
+          <img src={q.image} alt="Which AMG is this?" style={{ width: '100%', borderRadius: 8 }} />
+        )}
       </div>
       <div className="row" style={{ marginTop: 16 }}>
         {q.options.map((option) => (

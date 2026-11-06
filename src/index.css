@@ -73,7 +73,7 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: 48px;
 }
 
-.builder { display: flex; gap: 24px; flex-wrap: wrap; }
+.builder { display: flex; gap: 48px; flex-wrap: wrap; }
 .builder-view {
   flex: 2 1 520px;
   background: var(--panel);

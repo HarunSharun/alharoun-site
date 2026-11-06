@@ -1,7 +1,27 @@
 [
   {
-    "image": "/guess/q1.jpg",
-    "options": ["AMG GT 63", "C63 S", "G63", "E53"],
-    "answer": "G63"
-  }
+    "model": "/guess/models/q1.glb",
+    "options": ["300 SLR", "300 SL", "190 SL", "SLS AMG"],
+    "answer": "300 SL"
+  },
+  {
+     "model": "/guess/models/q2.glb",
+     "options": ["Mercedes 540K", "Mercedes SSKL", "Mercedes SSK", "Mercedes 500K"],
+     "answer": "Mercedes SSK"
+  },
+  {
+  "model": "/guess/models/q3.glb",
+  "options": ["Mercedes-Benz 300SLR", "Mercedes-Benz W125", "Mercedes-Benz W154", "Mercedes-Benz W196"],
+  "answer": "Mercedes-Benz W196"
+},
+{
+  "model": "/guess/models/q4.glb",
+  "options": ["Mercedes-Benz CLK 63 AMG Black Series", "Mercedes-Benz CLK 63 AMG", "Mercedes-Benz CLK GTR", "Mercedes-AMG CLK DTM"],
+  "answer": "Mercedes-Benz CLK GTR"
+},{
+  "model": "/guess/models/q5.glb",
+  "options": ["Mercedes-AMG ONE", "Mercedes-AMG GT Black Series", "Mercedes-Benz SLR McLaren", "Mercedes-Benz CLK GTR"],
+  "answer": "Mercedes-AMG ONE"
+}
 ]
+

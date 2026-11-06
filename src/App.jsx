@@ -11,7 +11,7 @@ export default function App() {
         <Link to="/" className="logo">AL HAROUN</Link>
         <div className="nav-links">
           <Link to="/build">Build</Link>
-          <Link to="/guess">Guess the AMG</Link>
+          <Link to="/guess">Guess the Mercedes</Link>
         </div>
         <a className="btn" href={whatsappLink("Hi Al Haroun, I'd like to know more.")}>
           WhatsApp us

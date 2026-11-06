@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <div className="card">
           <strong>Play</strong>
-          <p className="muted">Guess the AMG: a new car every day. Keep your streak.</p>
+          <p className="muted">Guess the Mercedes: a new car every day. Keep your streak.</p>
         </div>
         <div className="card">
           <strong>Buy</strong>
