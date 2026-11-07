@@ -18,10 +18,6 @@
   "model": "/guess/models/q4.glb",
   "options": ["Mercedes-Benz CLK 63 AMG Black Series", "Mercedes-Benz CLK 63 AMG", "Mercedes-Benz CLK GTR", "Mercedes-AMG CLK DTM"],
   "answer": "Mercedes-Benz CLK GTR"
-},{
-  "model": "/guess/models/q5.glb",
-  "options": ["Mercedes-AMG ONE", "Mercedes-AMG GT Black Series", "Mercedes-Benz SLR McLaren", "Mercedes-Benz CLK GTR"],
-  "answer": "Mercedes-AMG ONE"
 }
 ]
 
